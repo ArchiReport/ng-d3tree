@@ -1,0 +1,28 @@
+/* LINKS custom colors */
+path.link.red-link {
+    stroke: red;
+}
+
+path.link.orange-link {
+    stroke: orange;
+}
+
+path.link.green-link {
+    stroke: green;
+}
+
+/* CIRCLES custom colors */
+circle.green-circle {
+    stroke: red;
+    fill: grey;
+}
+
+circle.orange-circle {
+    stroke: orange;
+    fill: grey;
+}
+
+circle.red-circle {
+    stroke: red;
+    fill: grey;
+}

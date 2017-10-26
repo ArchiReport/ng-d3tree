@@ -120,8 +120,10 @@
 
             var link = svg.selectAll("path.link")
                 .data(links)
-              .enter().append("path")
-                .attr("class", "link")
+                .enter().append("path")
+                .attr("class", function(d) {
+                  return 'link ' + ((d.target.link_class) ? d.target.link_class : '')
+                })
                 .attr("d", diagonal);
 
             var node = svg.selectAll("g.node")
@@ -131,11 +133,14 @@
                 .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
 
             node.append("circle")
-                .attr("r", 4.5);
+                .attr("r", 4.5)
+                .attr("class", function(d) {
+                    return d.circle_class
+                 });
 
             node.append("text")
                 .attr("dx", function(d) { return d.children ? -8 : 8; })
-                .attr("dy", 3)
+                .attr("dy", function(d) { return d.children ? -4 : 3; })
                 .attr("text-anchor", function(d) { return d.children ? "end" : "start"; })
                 .text(function(d) 
                 {

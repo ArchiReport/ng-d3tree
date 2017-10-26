@@ -1,7 +1,7 @@
 {
   "name": "ng-d3tree",
-  "version": "0.1.0",
-  "homepage": "https://github.com/komushi/ng-d3tree",
+  "version": "0.2.0",
+  "homepage": "https://github.com/ArchiReport/ng-d3tree",
   "authors": [
     "Lei Xu <komushi@gmail.com>"
   ],
@@ -21,7 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.5",
+    "angular": "~1.4.7",
     "d3": "^3.5.17"
   }
 }

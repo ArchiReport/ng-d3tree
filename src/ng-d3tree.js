@@ -115,7 +115,7 @@
             // remove all previous items before render
             svg.selectAll("*").remove();
 
-            var nodes = tree.nodes(json),
+            var nodes = tree.nodes(angular.copy(json)),            
                 links = tree.links(nodes);
 
             var link = svg.selectAll("path.link")
